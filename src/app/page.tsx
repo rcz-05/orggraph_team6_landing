@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { LinkButton } from "@/components/ui/link-button";
 import {
   Card,
   CardContent,
@@ -50,9 +51,9 @@ export default function Home() {
               Who It&apos;s For
             </a>
           </nav>
-          <Button size="sm" render={<a href="#cta" />}>
+          <LinkButton href="#cta" size="sm">
             Join the Waitlist
-          </Button>
+          </LinkButton>
         </div>
       </header>
 
@@ -71,12 +72,12 @@ export default function Home() {
           and promoted based on real contributions, not office politics.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Button size="lg" render={<a href="#cta" />}>
+          <LinkButton href="#cta" size="lg">
             Request Early Access <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-          <Button variant="outline" size="lg" render={<a href="#solution" />}>
+          </LinkButton>
+          <LinkButton href="#solution" variant="outline" size="lg">
             See How It Works
-          </Button>
+          </LinkButton>
         </div>
       </section>
 
