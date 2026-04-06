@@ -32,15 +32,18 @@ const personas = [
 
 export function AudienceSection() {
   return (
-    <section id="audience" className="px-6 py-20 md:py-28">
+    <section id="audience" className="px-6 py-12 md:py-16">
       <div className="mx-auto max-w-6xl">
         {/* Section header */}
-        <div className="mb-16">
+        <div className="mb-10">
           <span className="text-[11px] font-medium tracking-[0.15em] uppercase text-[#bbb] block mb-3">
             Who It&apos;s For
           </span>
-          <h2 className="text-[clamp(1.6rem,3.5vw,2.8rem)] font-extrabold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] max-w-xl">
-            Built for every layer of the engineering org.
+          <h2
+            className="text-[clamp(1.6rem,3.5vw,2.8rem)] font-bold leading-[1.15] text-[#0a0a0a] max-w-xl"
+            style={{ fontFamily: "var(--font-caveat), cursive" }}
+          >
+            Built For Every Layer Of The Org.
           </h2>
         </div>
 
@@ -57,7 +60,7 @@ export function AudienceSection() {
             >
               <p.icon className="h-5 w-5 text-[#aaa] mb-5" />
 
-              <h3 className="text-base font-bold text-[#0a0a0a] mb-0.5 tracking-[-0.01em]">
+              <h3 className="text-2xl font-bold text-[#0a0a0a] mb-0.5" style={{ fontFamily: "var(--font-caveat), cursive" }}>
                 {p.title}
               </h3>
               <p className="text-[11px] font-medium text-[#bbb] mb-4 tracking-wide uppercase">

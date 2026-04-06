@@ -27,14 +27,17 @@ const quotes = [
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="px-6 py-20 md:py-28">
+    <section id="testimonials" className="px-6 py-12 md:py-16">
       <div className="mx-auto max-w-6xl">
         <div className="mb-14">
           <span className="text-[11px] font-medium tracking-[0.15em] uppercase text-[#bbb] block mb-3">
             Customer Discovery
           </span>
-          <h2 className="text-[clamp(1.6rem,3.5vw,2.8rem)] font-extrabold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] max-w-lg">
-            Straight from the engineers who live it.
+          <h2
+            className="text-[clamp(1.6rem,3.5vw,2.8rem)] font-bold leading-[1.15] text-[#0a0a0a] max-w-lg"
+            style={{ fontFamily: "var(--font-caveat), cursive" }}
+          >
+            Straight From The Engineers Who Live It.
           </h2>
         </div>
 
@@ -56,7 +59,7 @@ export function TestimonialsSection() {
                   {q.source[0]}
                 </div>
                 <div>
-                  <p className="text-[12px] font-semibold text-[#0a0a0a]">
+                  <p className="text-[16px] font-bold text-[#0a0a0a]" style={{ fontFamily: "var(--font-caveat), cursive" }}>
                     {q.source}
                   </p>
                   <p className="text-[11px] text-[#aaa]">{q.company}</p>

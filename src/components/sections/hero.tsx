@@ -7,8 +7,8 @@ const postits = [
   {
     // Top-left
     badge: "PROFILES",
-    badgeColor: "bg-[#c5d5f6] text-[#3b5fad]",
-    bg: "bg-[#dce7fb]",
+    badgeColor: "bg-[#f5c4b8] text-[#9e4433]",
+    bg: "bg-[#fce8e1]",
     title: "Auto-Generated Expertise",
     desc: "AI maps skills from GitHub, Jira & Slack — no forms needed.",
     icon: GitMerge,
@@ -19,8 +19,8 @@ const postits = [
   {
     // Top-right
     badge: "LIVE STATS",
-    badgeColor: "bg-[#e8cfa0] text-[#8a6420]",
-    bg: "bg-[#f5e6cc]",
+    badgeColor: "bg-[#b8cdb0] text-[#3d6132]",
+    bg: "bg-[#e2edd9]",
     title: "Contribution Evidence",
     desc: "Verifiable impact signals for fairer promotion reviews.",
     icon: BarChart3,
@@ -31,8 +31,8 @@ const postits = [
   {
     // Bottom-left
     badge: "DISCOVERY",
-    badgeColor: "bg-[#99d4a8] text-[#2a6e3c]",
-    bg: "bg-[#d4f0dc]",
+    badgeColor: "bg-[#e5d5a0] text-[#7a6520]",
+    bg: "bg-[#f5edd0]",
     title: "Internal Talent Search",
     desc: "Managers search by real skills, not titles or familiarity.",
     icon: Search,
@@ -43,8 +43,8 @@ const postits = [
   {
     // Bottom-right
     badge: "MOBILITY",
-    badgeColor: "bg-[#c9b8e8] text-[#5e3fa3]",
-    bg: "bg-[#e5daf5]",
+    badgeColor: "bg-[#b5c5d6] text-[#3a566e]",
+    bg: "bg-[#dce4ef]",
     title: "Team Discovery Portal",
     desc: "Engineers explore teams, stacks & projects before applying.",
     icon: Layers,
@@ -56,8 +56,8 @@ const postits = [
 
 export function HeroSection() {
   return (
-    <section className="relative px-6 pt-16 pb-10 md:pt-20 md:pb-16 overflow-hidden">
-      <div className="relative mx-auto max-w-6xl min-h-[600px] md:min-h-[700px] flex flex-col items-center justify-center">
+    <section className="relative px-6 pt-12 pb-6 md:pt-16 md:pb-10 overflow-hidden">
+      <div className="relative mx-auto max-w-6xl min-h-[500px] md:min-h-[580px] flex flex-col items-center justify-center">
 
         {/* ── Post-it cards ── */}
         {postits.map((card) => (
@@ -82,7 +82,7 @@ export function HeroSection() {
               >
                 {card.badge}
               </span>
-              <h3 className="text-[14px] font-bold text-[#0a0a0a] leading-tight mb-1.5">
+              <h3 className="text-[16px] font-bold text-[#0a0a0a] leading-tight mb-1.5" style={{ fontFamily: "var(--font-caveat), cursive" }}>
                 {card.title}
               </h3>
               <p className="text-[11px] leading-[1.5] text-[#666]">
@@ -108,7 +108,7 @@ export function HeroSection() {
                 >
                   {card.badge}
                 </span>
-                <h3 className="text-[12px] font-bold text-[#0a0a0a] leading-tight mb-1">
+                <h3 className="text-[14px] font-bold text-[#0a0a0a] leading-tight mb-1" style={{ fontFamily: "var(--font-caveat), cursive" }}>
                   {card.title}
                 </h3>
                 <p className="text-[10px] leading-[1.4] text-[#666]">
@@ -134,13 +134,13 @@ export function HeroSection() {
             className="text-[clamp(2.2rem,6vw,4.5rem)] font-bold leading-[1.15] tracking-[-0.01em] text-[#0a0a0a] max-w-2xl"
             style={{ fontFamily: "var(--font-caveat), cursive" }}
           >
-            what&apos;s your team&apos;s
+            What&apos;s Your Team&apos;s
             <br />
-            hidden expertise?
+            Hidden Expertise?
           </motion.h1>
 
           {/* Sub-elements row */}
-          <div className="mt-16 flex flex-col items-start justify-between gap-8 w-full max-w-3xl md:flex-row md:items-end">
+          <div className="mt-10 flex flex-col items-start justify-between gap-8 w-full max-w-3xl md:flex-row md:items-end">
             {/* Left: play button */}
             <motion.div
               initial={{ opacity: 0 }}

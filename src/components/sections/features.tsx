@@ -6,8 +6,8 @@ import { Brain, Search, LayoutGrid, CheckCircle2, ArrowRight } from "lucide-reac
 const features = [
   {
     badge: "PROFILES",
-    badgeColor: "bg-[#e8dff5] text-[#7c5cbf]",
-    bg: "bg-[#f0ebfa]",
+    badgeColor: "bg-[#f5c4b8] text-[#9e4433]",
+    bg: "bg-[#fce8e1]",
     icon: Brain,
     title: "Automated Skill Profiles",
     desc: "No more manual resume updates. OrgGraph connects to GitHub, Jira, and Slack to map your true technical footprint across every repository.",
@@ -19,8 +19,8 @@ const features = [
   },
   {
     badge: "SEARCH",
-    badgeColor: "bg-[#d4edda] text-[#2d7a3f]",
-    bg: "bg-[#e8f5ec]",
+    badgeColor: "bg-[#b8cdb0] text-[#3d6132]",
+    bg: "bg-[#e2edd9]",
     icon: Search,
     title: "AI Talent Discovery",
     desc: "Hiring managers find internal candidates using semantic search. \"Find me someone with fraud detection experience\" — and get ranked results instantly.",
@@ -32,8 +32,8 @@ const features = [
   },
   {
     badge: "MOBILITY",
-    badgeColor: "bg-[#fce4cc] text-[#b06e28]",
-    bg: "bg-[#fdf0e3]",
+    badgeColor: "bg-[#e5d5a0] text-[#7a6520]",
+    bg: "bg-[#f5edd0]",
     icon: LayoutGrid,
     title: "Internal Mobility Hub",
     desc: "Engineers discover projects and teams matched to their expertise, enabling career growth without leaving the company.",
@@ -47,7 +47,7 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="px-6 py-10 md:py-16">
+    <section id="features" className="px-6 py-8 md:py-12">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-5 md:grid-cols-3">
           {features.map((f, i) => (
@@ -70,7 +70,7 @@ export function FeaturesSection() {
               <f.icon className="h-6 w-6 text-[#0a0a0a]/60 mb-4" />
 
               {/* Title */}
-              <h3 className="text-lg font-bold text-[#0a0a0a] mb-2 tracking-[-0.01em]">
+              <h3 className="text-2xl font-bold text-[#0a0a0a] mb-2" style={{ fontFamily: "var(--font-caveat), cursive" }}>
                 {f.title}
               </h3>
 

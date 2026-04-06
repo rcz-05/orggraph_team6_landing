@@ -5,10 +5,10 @@ import { ArrowRight } from "lucide-react";
 
 export function CtaSection() {
   return (
-    <section id="cta" className="px-6 py-20 md:py-28">
+    <section id="cta" className="px-6 py-12 md:py-16">
       <div className="mx-auto max-w-6xl">
         {/* Warm background blob */}
-        <div className="relative rounded-3xl bg-[#fdf5ed] px-8 py-20 md:px-16 md:py-28 overflow-hidden">
+        <div className="relative rounded-3xl bg-[#fdf5ed] px-8 py-14 md:px-16 md:py-20 overflow-hidden">
           {/* Decorative blob */}
           <div className="pointer-events-none absolute -top-20 -right-20 h-[300px] w-[300px] rounded-full bg-[#f9e4cc]/60 blur-[80px]" />
           <div className="pointer-events-none absolute -bottom-20 -left-20 h-[250px] w-[250px] rounded-full bg-[#f5ddc8]/40 blur-[80px]" />
@@ -23,11 +23,12 @@ export function CtaSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-[clamp(1.8rem,4vw,3.2rem)] font-extrabold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] mb-8"
+              className="text-[clamp(1.8rem,4vw,3.2rem)] font-bold leading-[1.12] text-[#0a0a0a] mb-8"
+              style={{ fontFamily: "var(--font-caveat), cursive" }}
             >
-              Make your engineering
+              Make Your Engineering
               <br />
-              impact impossible to ignore.
+              Impact Impossible To Ignore.
             </motion.h2>
 
             {/* Email input + button */}
