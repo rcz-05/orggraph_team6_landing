@@ -1,12 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Eye, Search, TrendingUp, Ghost } from "lucide-react";
+import {
+  GitHubLogo,
+  JiraLogo,
+  SlackLogo,
+  LinearLogo,
+  ConfluenceLogo,
+} from "@/components/tool-logos";
 
-const sidebar = [
-  { num: "01", label: "The Challenge" },
-  { num: "02", label: "Why it matters" },
-  { num: "03", label: "The data gap" },
-  { num: "04", label: "Scaling complexity" },
+const painPoints = [
+  {
+    icon: Eye,
+    title: "Invisible contributions",
+    desc: "Engineers do critical work that never surfaces in reviews.",
+    color: "bg-[#dce7fb]",
+  },
+  {
+    icon: Search,
+    title: "Broken internal discovery",
+    desc: "Managers default to external hiring because internal talent is unfindable.",
+    color: "bg-[#d4f0dc]",
+  },
+  {
+    icon: TrendingUp,
+    title: "Narrative-driven promotions",
+    desc: "Advancement depends on who speaks loudest, not who ships most.",
+    color: "bg-[#f5e6cc]",
+  },
+  {
+    icon: Ghost,
+    title: "Tribal knowledge loss",
+    desc: "Expertise lives in people's heads and walks out the door with them.",
+    color: "bg-[#e5daf5]",
+  },
 ];
 
 export function ProblemSection() {
@@ -20,64 +48,48 @@ export function ProblemSection() {
         </p>
 
         {/* Tool logos row */}
-        <div className="flex flex-wrap justify-center gap-10 mb-24 text-[12px] font-medium tracking-[0.12em] uppercase text-[#bbb]">
-          <span>GitHub</span>
-          <span>Jira</span>
-          <span>Slack</span>
-          <span>Linear</span>
-          <span>Confluence</span>
+        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-14 mb-24">
+          <GitHubLogo className="h-9 w-auto text-[#24292f]" />
+          <JiraLogo className="h-9 w-auto" />
+          <SlackLogo className="h-9 w-auto" />
+          <LinearLogo className="h-9 w-auto" />
+          <ConfluenceLogo className="h-8 w-auto" />
         </div>
 
-        {/* Problem content: sidebar + big text */}
-        <div className="grid gap-12 md:grid-cols-[200px_1fr]">
-          {/* Left sidebar */}
-          <div className="flex flex-col gap-4">
-            {sidebar.map((item) => (
-              <div key={item.num} className="flex items-baseline gap-3">
-                <span className="text-[11px] font-medium text-[#ccc]">
-                  {item.num}
-                </span>
-                <span className="text-[12px] text-[#999]">— {item.label}</span>
-              </div>
-            ))}
-          </div>
+        {/* Section header */}
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-[clamp(1.6rem,3.5vw,2.6rem)] font-extrabold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] text-center mb-4"
+        >
+          Expertise gets lost at scale.
+        </motion.h2>
+        <p className="text-center text-[15px] text-[#999] mb-14 max-w-md mx-auto">
+          The bigger the org, the harder it is to know who knows what.
+        </p>
 
-          {/* Right: big problem statement */}
-          <div>
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
+        {/* Pain point cards */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {painPoints.map((p, i) => (
+            <motion.div
+              key={p.title}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-[clamp(1.8rem,4vw,3.2rem)] font-extrabold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] mb-8"
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className={`${p.color} rounded-2xl p-6 transition-all hover:shadow-md cursor-default`}
             >
-              As organizations scale,
-              <br />
-              engineering expertise
-              <br />
-              becomes a ghost in the
-              <br />
-              system.
-            </motion.h2>
-
-            <div className="max-w-lg space-y-5 text-[14px] leading-[1.7] text-[#666]">
-              <p>
-                In a company of 500+ engineers, knowing who is actually the
-                expert in high-concurrency Ruby systems or who pioneered your
-                migration to K8s becomes tribal knowledge.
+              <p.icon className="h-5 w-5 text-[#0a0a0a]/50 mb-4" />
+              <h3 className="text-[14px] font-bold text-[#0a0a0a] mb-1.5">
+                {p.title}
+              </h3>
+              <p className="text-[12px] leading-[1.5] text-[#555]">
+                {p.desc}
               </p>
-              <p>
-                Impact is often buried in closed PRs, resolved tickets, and
-                ephemeral Slack threads. When promotion cycles hit, engineers
-                struggle to prove their value, and hiring managers look external
-                because they can&apos;t find the internal talent they need.
-              </p>
-              <p>
-                We&apos;re building OrgGraph to ensure every line of code, every
-                architectural decision, and every mentorship moment is counted.
-              </p>
-            </div>
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

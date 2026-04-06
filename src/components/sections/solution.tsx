@@ -13,9 +13,7 @@ export function SolutionSection() {
           transition={{ duration: 0.6 }}
           className="text-center text-[clamp(1.6rem,3.5vw,2.8rem)] font-extrabold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] max-w-3xl mx-auto mb-6"
         >
-          At OrgGraph, we&apos;re bringing engineering leaders and ICs to the
-          table to change how we define impact. The joy of shipping
-          shouldn&apos;t be lost in scale.
+          Impact shouldn&apos;t disappear at scale.
         </motion.h2>
       </div>
     </section>
